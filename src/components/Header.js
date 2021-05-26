@@ -2,10 +2,22 @@ import React from "react";
 import styled from "styled-components";
 import bgPatern1 from "../images/bg-pattern-home-1.svg";
 import bgPatern2 from "../images/bg-pattern-home-2.svg";
+import { motion } from "framer-motion";
 const Header = () => {
+    const pageVariants = {
+        in: {
+            y: 0
+        },
+        out: {
+            y: "120px"
+        }
+    }
+    const pageTransition = {
+        duration: 0.5
+    }
     return (
         <HeaderWrapper>
-            <div className="container">
+            <motion.div className="container" initial="out" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
                 <div className="find-talent">
                     <div className="big-text">
                         <h1>Find the
@@ -21,7 +33,7 @@ const Header = () => {
                         talent. We’re about to change that.</p>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </HeaderWrapper>
     )
 }

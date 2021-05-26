@@ -1,14 +1,17 @@
 import React from "react";
 import AboutHeader from "../components/AboutHeader";
-import DirectorsSection from "../components/DirectorsSection";
+import Directors from "../components/Directors";
+import Clients from "../components/Clients";
 import Banner from "../components/ReadyBanner";
 const About = () => {
     return (
         <React.Fragment>
             <AboutHeader />
-            <DirectorsSection />
+            <Directors />
+            <Clients />
             <Banner />
         </React.Fragment>
     )
 }
+
 export default About;

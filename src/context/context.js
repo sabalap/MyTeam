@@ -1,14 +1,11 @@
 import React, { useReducer, useContext } from "react";
 import {
     SIDEBAR_OPEN,
-    SIDEBAR_CLOSE,
-    FLIPPED,
-    BACKFLIPPED
+    SIDEBAR_CLOSE
 } from "../actions";
 import reducer from "../reducer/reducer";
 const initialState = {
     isSidebarOpen: false,
-    isFlipped: false,
 }
 const Context = React.createContext();
 export const ContextProvider = ({ children }) => {
@@ -19,14 +16,8 @@ export const ContextProvider = ({ children }) => {
     const closeSidebar = () => {
         dispatch({ type: SIDEBAR_CLOSE })
     }
-    const flipped = () => {
-        dispatch({ type: FLIPPED })
-    }
-    const backFlipped = () => {
-        dispatch({ type: BACKFLIPPED })
-    }
     return (
-        <Context.Provider value={{ ...state, openSidebar, closeSidebar, flipped, backFlipped }}>
+        <Context.Provider value={{ ...state, openSidebar, closeSidebar }}>
             {children}
         </Context.Provider>
     )

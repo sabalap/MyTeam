@@ -51,14 +51,17 @@ const SidebarWrapper = styled.nav`
     background-repeat: no-repeat;
     background-position: bottom right -95px;
     .header{
-        padding: 40px 50px;
+        padding: 40px 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        img{
+            max-width: 120px;
+        }
         button{
             margin-left: auto;
             display: block;
-            font-size: 30px;
+            font-size: 25px;
         }
     }
     hr{
@@ -84,13 +87,14 @@ const SidebarWrapper = styled.nav`
 }
 ul{
     margin-top:40px;
-    padding:0px 70px;
+    padding:0px 30px;
+    margin-bottom: 20px;
     li{
-        margin-bottom:15px;
+        margin-bottom:7px;
     }
     li a{
         color:white;
-        font-size:23px;
+        font-size:20px;
     }
 }
 .contact-btn{
@@ -98,12 +102,21 @@ ul{
     padding: 10px 30px;
     border-radius: 100px;
     display: block;
-    width: 35%;
+    width: 60%;
     margin: 0 auto;
     transition: 0.2s ease-in-out;
+    text-align: center;
     &:hover{
         background-color: #FFF;
         color: #002529;
+    }
+}
+@media (max-width:350px){
+    .sidebar{
+        background-image: unset;
+        .contact-btn{
+            width: 80%;
+        }
     }
 }
 `

@@ -6,9 +6,12 @@ import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
 import About from "./pages/AboutPage";
+import Contact from "./pages/ContactPage";
+import ScrollToTop from "./ScrollToTop";
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Sidebar />
       <Switch>
@@ -17,6 +20,9 @@ const App = () => {
         </Route>
         <Route path="/about" exact>
           <About />
+        </Route>
+        <Route path="/contact" exact>
+          <Contact />
         </Route>
       </Switch>
       <Footer />
